@@ -12,7 +12,10 @@ int main(){
   if(coin == 0){
 
     std::cout << "cara" << '\n';
+
   }else{
+
     std::cout << "cruz" << '\n';
+    
   }
 }
