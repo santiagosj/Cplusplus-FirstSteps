@@ -23,4 +23,8 @@ score = 5 % 2;
 std::cout << year << '\n';
 std::cout << score << '\n';
 
+//concatenando
+
+int age = 32;
+std::cout << "Hola mi nombre es Santiago y mi edad es " << age << '\n';
 }
