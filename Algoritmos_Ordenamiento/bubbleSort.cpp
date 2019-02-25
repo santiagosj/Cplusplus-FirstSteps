@@ -4,7 +4,7 @@
 
 template <typename RandomAccessIterator>
 
-void bubbleSort(RandomAccessIterator begin,RandomAccessIterator end){
+void bubbleSort(RandomAccessIterator begin, RandomAccessIterator end){
 
   bool swapped = true;
 

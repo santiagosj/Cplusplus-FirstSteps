@@ -24,7 +24,6 @@ void esFloat();
 char c;
 int b;
 float a;
-int x,z,y;
 
 int intentos = 0;
 

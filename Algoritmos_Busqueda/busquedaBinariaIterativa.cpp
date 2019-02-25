@@ -15,18 +15,18 @@ template <class T> int busquedabinaria(const T array[], int largo, T valor){
 
         alto = medio - 1;
 
-      }else if(array[medio] < valor){
+      } else if(array[medio] < valor) {
 
         bajo = medio + 1;
 
-      }else{
+      } else {
 
         return medio;
 
       }
 
     }
-    
+
     return -1;
   }
 

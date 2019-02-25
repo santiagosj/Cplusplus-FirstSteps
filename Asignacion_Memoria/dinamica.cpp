@@ -20,6 +20,7 @@ int numCalif, *calificacion;
 
 double promedioNotas;
 
+//============MAIN=============//
 
 int main()
 {
@@ -34,7 +35,7 @@ int main()
 	return 0;
 }
 
-//definicion de funciones
+//==================DEFINICION DE FUNCIONES==============================//
 
 void pedirNotas()
 {

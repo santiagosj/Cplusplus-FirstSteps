@@ -1,8 +1,18 @@
 #include <iostream>
 
-int main(){
-//para declarar variables en C++ es necesario aclarar el tipo de dato que esta va a almecenar(tipado fuerte)
+int x = 5;
 
+const int a = 5;
+
+int main(int argc, char** argv){
+//para declarar variables en C++ es necesario aclarar el tipo de dato que esta va a almecenar(tipado fuerte)
+int x = x; //4201115 ?¿ // should be undefined
+std::cout << "el valor de x es : " << x << '\n';
+
+int b[a];
+int c = sizeof(b) / sizeof(int); // c = 5;
+
+std::cout << "el valor de c es: " << c << '\n';
 //declaro una variable que almacenará un numero entero
 int year;
 
@@ -13,7 +23,6 @@ year = 2019;
 int score = 0;
 
 //operadores aritmeticos
-
 score = 4 + 2;
 score = 4 - 2;
 score = 4 * 2;
