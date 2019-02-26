@@ -6,8 +6,11 @@ bool funcionA(int, int, bool (*)( int ));
 bool funcionB(int);
 
 
-int main() {
+int main()
+{
   int x = 135, y = 255; //otra manera de inicializar variables
+
+  //el tercer parametro de la funcionA es el puntero a la funcionB
   if (funcionA(x, y, funcionB)) {
       cout << "El resultado es verdadero--" << '\n';
   }else{
@@ -16,13 +19,15 @@ int main() {
 
 }
 
-bool funcionA(int param1, int param2, bool(*verificar)(int)) {
+bool funcionA(int param1, int param2, bool(*verificar)(int))
+{
   if (((*verificar)(param1))&&((*verificar)(param2))) {
     return true;
   }
 }
 
-bool funcionB(int param) {
+bool funcionB(int param)
+{
   if (param > 100) {
      return true;
   }else{
