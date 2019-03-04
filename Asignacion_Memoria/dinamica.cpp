@@ -42,7 +42,7 @@ void pedirNotas()
 	cout << "Ingresa el numero de calificaciones: \n";
 	cin >> numCalif;
 
-	calificacion = new int[numCalif]; //reserva de memoria, creacion del arreglo dinamico, se le asigna al puntero la primer posicion del arreglo dinamico.
+	calificacion = new int[numCalif]; //reserva de memoria (heap), creacion del arreglo dinamico, se le asigna al puntero la primer posicion del arreglo dinamico.
 
 	for (int i = 0; i < numCalif; i++)
 	{

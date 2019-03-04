@@ -13,6 +13,7 @@ int main() {
   std::cout << "Origen: " << '\n';
   std::cin >> origen;
   std::cout << "Copia: " << '\n';
+  
   copiarChar(origen, destino);
 }
 
