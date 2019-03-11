@@ -49,44 +49,14 @@ void limites(){
 		gotoxy(77, i); printf("%c", 186);
 	}
 
-	gotoxy(2, 3); printf("%c", 201);
-	gotoxy(2, 33); printf("%c", 200);
-	gotoxy(77, 3); printf("%c", 187);
-	gotoxy(77, 33); printf("%c", 188);
+	  gotoxy(2, 3); printf("%c", 201);
+	  gotoxy(2, 33); printf("%c", 200);
+	  gotoxy(77, 3); printf("%c", 187);
+	  gotoxy(77, 33); printf("%c", 188);
 
 }
 
-class NAVE
-{
-public:
-
-	NAVE(int _x, int _y, int _corazones, int _vidas) : x(_x), y(_y), corazones(_corazones), vidas(_vidas) {}; //defino el construcotr directamente en la clase
-
-	void pintar();
-	void mover();
-	void borrar();
-	void pintar_corazones();
-	void morir();
-	int X() { return x; }
-	int Y() { return y; }
-	void COR() {  corazones--; };
-	int nVidas() { return vidas; };
-private:
-	int x, y, corazones;
-	int vidas;
-};
-
-class AST {
-  public:
-	  AST(int _x, int _y):x(_x),y(_y){};
-	  void pintar();
-	  void mover();
-	  void choque(class NAVE &N);
-	  int X() { return x; }
-	  int Y() { return y; }
-  private:
-	  int x, y;
-};
+//=================================BALA=========================================
 
 class BALA {
 public:
@@ -109,6 +79,21 @@ bool BALA::fuera() {
 	if (y == 4) return true;
 	return false;
 }
+
+//=============================ASTEROIDES=======================================
+
+class AST {
+  public:
+	  AST(int _x, int _y):x(_x),y(_y){};
+	  void pintar();
+	  void mover();
+	  void choque(class NAVE &N);
+	  int X() { return x; }
+	  int Y() { return y; }
+  private:
+	  int x, y;
+};
+
 void AST::pintar() {
 	gotoxy(x, y); printf("%c", 184);
 }
@@ -136,6 +121,28 @@ void AST::choque(class NAVE &N) {
 		y = 4;
 	}
 }
+
+//===========================NAVE===============================================
+
+class NAVE
+{
+public:
+
+	NAVE(int _x, int _y, int _corazones, int _vidas) : x(_x), y(_y), corazones(_corazones), vidas(_vidas) {}; //defino el construcotr directamente en la clase
+
+	void pintar();
+	void mover();
+	void borrar();
+	void pintar_corazones();
+	void morir();
+	int X() { return x; }
+	int Y() { return y; }
+	void COR() {  corazones--; };
+	int nVidas() { return vidas; };
+private:
+	int x, y, corazones;
+	int vidas;
+};
 
 void NAVE::pintar() {
 
@@ -167,10 +174,6 @@ void NAVE::mover() {
 
 		if (tecla == ARRIBA && y > 4) { y--; }
 
-		if (tecla == 'e')
-		{
-			corazones--;
-		}
 		pintar();
 		pintar_corazones();
 	}
@@ -213,6 +216,9 @@ void NAVE::morir(){
 		pintar();
 	}
 }
+
+//===================================MAIN=======================================
+
 int main()
 {
 
