@@ -7,6 +7,8 @@
 #pragma once
 #include "Texture.h"
 
+//hereda de texturas para hacer el render de las gemas...
+
 class Rock : public Texture
 {
 public:
@@ -17,17 +19,31 @@ public:
 	//Here we define a 10px separation between rocks
 	static const int PIXEL_SEPARATION = 10;
 
-	static enum RockColor { RED, YELLOW, GREEN, BLUE, PURPLE };
+	//array de colores para asignar a las texturas
 
+	static enum RockColor { RED, YELLOW, GREEN, BLUE, PURPLE };
+  //constructors
+	//pasa por parametro el Render con puntero a la imagen
 	Rock(SDL_Renderer *r);
 	Rock();
 	~Rock();
+  //funciones
+  //asigna color
+  void SetColor(unsigned short color);
 
-	void SetColor(unsigned short color);
+	//asigna fila
 	void SetRow(unsigned short row);
+
+	//asigna columna
 	void SetCol(unsigned short col);
+
+	//obtiene valor color
 	unsigned short GetColor() const;
+
+	//obtiene valor fila
 	unsigned short GetRow() const;
+
+	//obtiene valor columna
 	unsigned short GetCol() const;
 
 private:
@@ -35,4 +51,3 @@ private:
 	unsigned short _mRow;
 	unsigned short _mCol;
 };
-

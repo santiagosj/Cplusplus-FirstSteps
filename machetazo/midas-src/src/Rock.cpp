@@ -5,7 +5,8 @@
 //@brief:	Rock implementation
 //-----------------------------------------------------------------------------
 #include "Rock.h"
-
+//ejemplo de sobrecarga..?
+//implementacion de constructor
 Rock::Rock(SDL_Renderer *r)
 {
 	_mRenderer = r;
