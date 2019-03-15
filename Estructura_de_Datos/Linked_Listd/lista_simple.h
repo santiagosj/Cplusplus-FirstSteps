@@ -1,4 +1,4 @@
-#ifndef LIST_H
+#ifndef LIST_H //condicionales de cabezara para la definicion de LIST_H
 #define LIST_H
 
 class List{
