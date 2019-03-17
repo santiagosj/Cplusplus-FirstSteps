@@ -244,6 +244,7 @@ int main()
 	//iterador de lista asteroides
 	list<AST*>::iterator itA;
 
+	//asteroides forever...
 	for (int i = 0; i < 5; i++)
 	{
 		A.push_back(new AST(rand()%75 + 3, rand()%5 + 4 ));
@@ -263,7 +264,7 @@ int main()
 	{
 
 		gotoxy(4, 2); printf("Puntos: %d", puntos);
-
+    //balas infinitas....con la letra a
 		if (_kbhit())
 		{
 			char tecla = _getch();
@@ -272,7 +273,7 @@ int main()
 				B.push_back(new BALA (N.X() + 2, N.Y() - 1));
 			}
 		}
-
+    //iterador de lista balas 
 		for (it = B.begin(); it != B.end();)
 		{
 			(*it) -> mover();
