@@ -1,2 +1,7 @@
-﻿  main.cpp
-  Shapes.vcxproj -> C:\Users\sanjs\source\repos\Shapes\Debug\Shapes.exe
+﻿  pch.cpp
+  main.cpp
+  Rectangulo.cpp
+  Shapes.cpp
+  Triangulo.cpp
+  Generando código...
+  Shapes.vcxproj -> C:\Users\sanjs\Desktop\C++-First_steps\Shapes\Debug\Shapes.exe

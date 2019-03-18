@@ -8,33 +8,22 @@
 using namespace std;
 
 /*
-No estoy del todo convencido de la practicidad del codigo logrado hasta el día de la fecha 17/03/2019 por las siguientes razones:
-
-1-Como simplificar en un solo proceso, las listas e iteradores de calse, en una sola lista y un solo iterador de formas??
-
-2-El codigo en sí no cumple con la rutina de imprimir todas las figuras creadas por el usuario. Imprime la cantidad de figuras creadas..
+El codigo en sí no cumple con la rutina de imprimir todas las figuras creadas por el usuario. Imprime la cantidad de figuras creadas..
 
 e imprime las figuras pero con las medidas tomadas por la ultima creada.
 */
 
 
-//lista de Rectangulos
-list<Rectangulo*> rectangulos;
+
+//lista de figuras
+list<Shape*> figuras;
 
 //iterador de lista
-list<Rectangulo*>::iterator itRect;
-
-//lista de Triangulos
-list<Triangulo*> triangulos;
-
-//iterador de lista
-list<Triangulo*>::iterator itTri;
+list<Shape*>::iterator itFig;
 
 int _width, _height;
 
-void mostrarRectangulos();
-
-void mostrarTriangulos();
+void mostrarFiguras();
 
 int main() 
 {
@@ -65,7 +54,7 @@ int main()
 
 			cin >> _height;
 
-			rectangulos.push_back(new Rectangulo);
+			figuras.push_back(new Rectangulo);
 
 		}
 		else if (fig == 2) {
@@ -74,7 +63,7 @@ int main()
 
 			cin >> _height;
 
-			triangulos.push_back(new Triangulo);
+			figuras.push_back(new Triangulo);
 
 		}
 
@@ -86,35 +75,20 @@ int main()
 
 	}
 
-	mostrarRectangulos();
+	mostrarFiguras();
 
-	cout << "Cantidad de Rectangulos creados: " << rectangulos.size(); cout << endl;
+	cout << "Cantidad de figuras creadaas: " << figuras.size(); cout << endl;
 
-	mostrarTriangulos();
-
-	cout << "Cantidad de Triangulos creados: " << triangulos.size(); cout << endl;
 }
 
 
-
-void mostrarRectangulos()
+void mostrarFiguras()
 {
-	for (itRect = rectangulos.begin();itRect!= rectangulos.end(); itRect++)
-	{
-		  
-		(*itRect)->Draw(_width, _height); cout << endl;
+	for(itFig = figuras.begin(); itFig != figuras.end(); itFig++) {
+
+		(*itFig)->Draw(_width, _height); cout << endl;
+
+		(*itFig)->Draw(_height); cout << endl;
 
 	}
-	cout << '\n';
-}
-
-void mostrarTriangulos()
-{
-	for (itTri = triangulos.begin(); itTri != triangulos.end(); itTri++)
-	{
-
-		(*itTri)->Draw(_height); cout << endl;
-
-	}
-	cout << '\n';
 }

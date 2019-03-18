@@ -6,9 +6,12 @@ public:
 	Shape();
 	~Shape();
 
-	virtual void Draw();
+	virtual void Draw(int width, int height);
+
+	virtual void Draw(int height);
 
 private:
-	
+	int width;
+	int height;
 };
 
