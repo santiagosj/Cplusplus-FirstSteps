@@ -1,17 +1,17 @@
 #pragma once
 #include "Engine.h"
 
-
-
 	class Gema : public King::Engine {
 	public:
-		Gema();
+
+		//declaraciones
+
+		Gema(); //constructor 
 		~Gema();//destructor
 
-		void Draw(int color);
+		void Draw(int color);  // funcion draw que devuelve una textura segun el numero entero que le pase como parametro
 
 	private:
-		Texture color;
 		King::Engine mColor; //logica de ExampleGame
 	};
 

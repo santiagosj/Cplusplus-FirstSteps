@@ -1,14 +1,8 @@
-﻿  Engine.cpp
-  Font.cpp
-  Gema.cpp
-  GlContext.cpp
-  Sdl.cpp
-  SdlSurface.cpp
-  SdlWindow.cpp
+﻿  Gema.cpp
   main.cpp
   Generando código
-  239 of 241 functions (99.2%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
+  9 of 241 functions ( 3.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
   Worktest.vcxproj -> C:\Users\sanjs\Desktop\C++-First_steps\Game-midas-miner-tarea\Game\vs2012 base project\bin\Worktest.exe

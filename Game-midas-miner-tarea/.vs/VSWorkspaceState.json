@@ -2,11 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Game",
-    "\\Game\\vs2012 base project",
-    "\\Game\\vs2012 base project\\external",
     "\\Game\\vs2012 base project\\external\\include",
+    "\\Game\\vs2012 base project\\external\\include\\king",
     "\\Game\\vs2012 base project\\src"
   ],
-  "SelectedNode": "\\Game\\vs2012 base project\\src\\main.cpp",
+  "SelectedNode": "\\Game\\vs2012 base project",
   "PreviewInSolutionExplorer": false
 }
