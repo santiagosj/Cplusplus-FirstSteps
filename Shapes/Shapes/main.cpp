@@ -7,14 +7,6 @@
 
 using namespace std;
 
-/*
-El codigo en sí no cumple con la rutina de imprimir todas las figuras creadas por el usuario. Imprime la cantidad de figuras creadas..
-
-e imprime las figuras pero con las medidas tomadas por la ultima creada.
-*/
-
-
-
 //lista de figuras
 list<Shape*> figuras;
 
