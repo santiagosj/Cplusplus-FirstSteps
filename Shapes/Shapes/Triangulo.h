@@ -5,10 +5,10 @@
 class Triangulo : public Shape
 {
 public:
-	Triangulo();
+	Triangulo(int);
 	~Triangulo();
 
-	void Draw(int _altura);
+	void Draw();
 private:
 	int altura;
 };

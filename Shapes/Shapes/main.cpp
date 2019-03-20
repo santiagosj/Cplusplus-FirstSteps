@@ -7,14 +7,6 @@
 
 using namespace std;
 
-/*
-El codigo en sí no cumple con la rutina de imprimir todas las figuras creadas por el usuario. Imprime la cantidad de figuras creadas..
-
-e imprime las figuras pero con las medidas tomadas por la ultima creada.
-*/
-
-
-
 //lista de figuras
 list<Shape*> figuras;
 
@@ -23,12 +15,14 @@ list<Shape*>::iterator itFig;
 
 int _width, _height;
 
+int fig;
+
 void mostrarFiguras();
 
 int main() 
 {
 	
-	int fig;
+	
 
 	int run;
 
@@ -54,8 +48,9 @@ int main()
 
 			cin >> _height;
 
-			figuras.push_back(new Rectangulo);
+			Shape *rectangulo = new Rectangulo(_width, _height);
 
+			figuras.push_back(rectangulo);
 		}
 		else if (fig == 2) {
 
@@ -63,8 +58,9 @@ int main()
 
 			cin >> _height;
 
-			figuras.push_back(new Triangulo);
+			Shape *triangulo = new Triangulo(_height);
 
+			figuras.push_back(triangulo);
 		}
 
 		cout << "Desea seguir creando figuras?" << endl;
@@ -86,9 +82,7 @@ void mostrarFiguras()
 {
 	for(itFig = figuras.begin(); itFig != figuras.end(); itFig++) {
 
-		(*itFig)->Draw(_width, _height); cout << endl;
-
-		(*itFig)->Draw(_height); cout << endl;
+		(*itFig)->Draw(); cout << endl;
 
 	}
 }

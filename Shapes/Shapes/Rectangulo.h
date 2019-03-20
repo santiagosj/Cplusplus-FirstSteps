@@ -1,17 +1,17 @@
 #pragma once
 #include "Shape.h"
 
-class Rectangulo:public Shape
+class Rectangulo: public Shape
 {
 public:
-	//constructores
-	Rectangulo();
+	//constructor
+	Rectangulo(int, int);
 
    ~Rectangulo();
 
    //protoripo
    
-   void Draw(int _width, int _height);
+   void Draw();
 
 private:
 	int width;

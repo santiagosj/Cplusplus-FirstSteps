@@ -6,19 +6,20 @@
 using namespace std;
 
 
-Triangulo::Triangulo() :Shape()
+Triangulo::Triangulo(int _altura) :Shape()
 {
+	altura = _altura;
 }
 
 Triangulo::~Triangulo()
 {
 }
 
-void Triangulo::Draw(int _altura)
+void Triangulo::Draw()
 {
 	cout << "Esto es un Triangulo..." << endl;
 
-	for (int i = 1; i <= _altura; ++i)
+	for (int i = 1; i <= altura; ++i)
 	{
 		for (int j = 1; j <= i; ++j)
 		{

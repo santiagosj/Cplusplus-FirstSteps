@@ -4,8 +4,10 @@
 
 using namespace std;
 
-Rectangulo::Rectangulo():Shape()
+Rectangulo::Rectangulo(int _width, int _height):Shape()
 {
+	width = _width;
+	height = _height;
 }
 
 Rectangulo::~Rectangulo()
@@ -13,14 +15,14 @@ Rectangulo::~Rectangulo()
 }
 
 
-void Rectangulo::Draw(int _width, int _height)
+void Rectangulo::Draw()
+
 {
-    
 	cout << "esto es un Rectangulo..." << endl;
 
-	for (int i = 0; i < _height; i++)
+	for (int i = 0; i < height; i++)
 	{
-		for (int j = 0; j < _width; j++)
+		for (int j = 0; j < width; j++)
 		{
 			cout << " * ";
 		}

@@ -8,10 +8,7 @@ Shape::Shape(){}
 
 Shape::~Shape(){}
 
-void Shape::Draw(int width, int height)
+void Shape::Draw()
 {
 }
 
-void Shape::Draw(int height)
-{
-}
