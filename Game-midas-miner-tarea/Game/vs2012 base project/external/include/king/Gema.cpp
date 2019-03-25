@@ -27,7 +27,7 @@ void Gema::Draw(int color)
 		default:
 			break;
 	}
-
+	 
 }
 
 

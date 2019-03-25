@@ -1,5 +1,5 @@
 #define GLM_FORCE_RADIANS 
-
+#include <iostream>
 #include <king/Engine.h>
 #include <king/Updater.h>
 #include <king/Gema.h>
@@ -16,6 +16,11 @@ public:
 		, mYellowDiamondY(100.0f) {
 	}
 
+	int tablero[8][8]; 
+	
+	int filas = 8, columnas = 8;
+
+
 	void Start() {
 		mEngine.Start(*this);
 	}
@@ -29,6 +34,17 @@ public:
 		gema.Draw(3);
 		gema.Draw(4);
 		gema.Draw(5);
+
+		/*for (int i = 0; i < filas; i++) {
+
+			for (int j = 0; j < columnas; j++) {
+
+				 gema.Draw(rand() % 5);
+
+				std::cout << tablero[i][j] << " ";
+			}
+			std::cout << "\n";
+		}*/
 		
 	}
 
