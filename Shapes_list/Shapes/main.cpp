@@ -69,5 +69,9 @@ int main()
 
 	cout << "Cantidad de figuras creadaas: " << figuras.size(); cout << endl;
 
+	figuras.clear();
+
+	delete figura;
+
 }
 
